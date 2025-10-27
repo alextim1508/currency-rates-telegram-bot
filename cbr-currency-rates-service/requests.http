@@ -1,0 +1,15 @@
+GET http://localhost:8081/api/v1/currencyrate/USD/13-02-2023
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "currency": "USD",
+  "date": "27/10/2025"
+}
+
+###
+GET https://cbr.ru/scripts/XML_daily.asp?date_req=27/10/2025
+Accept: application/xml
+
+###

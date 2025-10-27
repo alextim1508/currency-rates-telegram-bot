@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+app:
+  cbr:
+    url: https://cbr.ru/scripts/XML_daily.asp
+  rest:
+    api:
+      prefix: /api
+  cache:
+    size: 365
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

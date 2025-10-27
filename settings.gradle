@@ -1,0 +1,4 @@
+rootProject.name = 'currency-rates-telegram-bot'
+include 'cbr-currency-rates-service'
+include 'telegram-bot'
+

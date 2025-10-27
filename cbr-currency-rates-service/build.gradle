@@ -1,0 +1,8 @@
+jar {
+    archiveBaseName.set("cbr-currency-rates-service")
+    archiveVersion.set("")
+}
+
+group 'com.alextim.currencyrates'
+version '1.0-SNAPSHOT'
+
