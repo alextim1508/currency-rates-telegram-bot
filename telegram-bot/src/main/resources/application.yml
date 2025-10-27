@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+app:
+  currency-rate-client:
+    urls:
+      CBR: http://localhost:8081/api/v1/currencyrate
+  telegram:
+    url: https://api.telegram.org
+    bot-token: ${TELEGRAM_BOT_TOKEN}
+    refresh-rate-ms: 3000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
