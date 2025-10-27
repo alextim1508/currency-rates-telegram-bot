@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  cbr-currency-rates-service:
+    container_name: currency-rate-service
+    build:
+      context: ./cbr-currency-rates-service
+    environment:
+      - SERVER_PORT=8081
+
+  telegram-bot:
+    container_name: telegram-bot
+    build:
+      context: ./telegram-bot
+    env_file:
+      - secrets/telegram-token.env
+    environment:
+      - SERVER_PORT=8082
+      - APP_CURRENCY_RATE_CLIENT_URLS_CBR=http://currency-rate-service:8081/api/v1/currencyrate
+    depends_on:
+      - cbr-currency-rates-service
